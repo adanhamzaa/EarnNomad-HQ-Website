@@ -17,7 +17,11 @@
     --dark: #085041;
     --mint: #9FE1CB;
     --cream: #E1F5EE;
-    --black: #0a0a0a;
+    --black: #060809;
+    --black2: #0d1210;
+    --green-bright: #12876A;
+    --mint-bright: #7DDBB8;
+    --gold: #F4C542;
     --white: #ffffff;
     --gray: #6b7280;
     --light-gray: #f8fafb;
@@ -43,7 +47,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10,10,10,0.85);
+    background: rgba(6,8,9,0.92);
+    border-bottom: 1px solid rgba(159,225,203,0.15);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(159,225,203,0.1);
   }
@@ -99,18 +104,20 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(15,110,86,0.25) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 10% 80%, rgba(8,80,65,0.2) 0%, transparent 60%),
-      var(--black);
+      radial-gradient(ellipse 70% 60% at 65% 45%, rgba(15,110,86,0.55) 0%, transparent 60%),
+      radial-gradient(ellipse 45% 45% at 5% 85%, rgba(8,80,65,0.4) 0%, transparent 55%),
+      radial-gradient(ellipse 35% 35% at 90% 15%, rgba(159,225,203,0.12) 0%, transparent 50%),
+      linear-gradient(160deg, #060809 0%, #081210 40%, #060809 100%);
   }
 
   .hero-grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(159,225,203,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(159,225,203,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(rgba(159,225,203,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(159,225,203,0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
   }
 
   .hero-content {
@@ -182,7 +189,7 @@
   }
 
   .btn-primary {
-    background: var(--green);
+    background: linear-gradient(135deg, #0F6E56 0%, #12876A 100%);
     color: var(--white);
     padding: 0.9rem 2rem;
     border-radius: 6px;
@@ -257,7 +264,7 @@
   /* ── ABOUT ── */
   .about {
     padding: 6rem 2rem;
-    background: var(--black);
+    background: linear-gradient(180deg, #060809 0%, #081210 50%, #060809 100%);
     position: relative;
   }
 
@@ -281,6 +288,7 @@
     text-transform: uppercase;
     color: var(--mint);
     margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(159,225,203,0.4);
   }
 
   .about-grid {
@@ -322,8 +330,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.2rem;
-    background: rgba(15,110,86,0.1);
-    border: 1px solid rgba(15,110,86,0.2);
+    background: rgba(15,110,86,0.12);
+    border: 1px solid rgba(15,110,86,0.35);
     border-radius: 8px;
     transition: border-color 0.2s;
   }
@@ -345,8 +353,8 @@
   .credential-sub { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.15rem; }
 
   .about-map {
-    background: rgba(15,110,86,0.08);
-    border: 1px solid rgba(15,110,86,0.2);
+    background: linear-gradient(135deg, rgba(15,110,86,0.12) 0%, rgba(8,80,65,0.08) 100%);
+    border: 1px solid rgba(15,110,86,0.35);
     border-radius: 16px;
     padding: 2rem;
     position: relative;
@@ -453,8 +461,8 @@
   }
 
   .service-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(15,110,86,0.04);
+    border: 1px solid rgba(15,110,86,0.15);
     border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s;
@@ -564,8 +572,8 @@
   }
 
   .blog-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(15,110,86,0.04);
+    border: 1px solid rgba(15,110,86,0.15);
     border-radius: 12px;
     padding: 1.8rem;
     text-decoration: none;
@@ -670,7 +678,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(15,110,86,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(15,110,86,0.25) 0%, transparent 70%);
   }
 
   .contact-inner { position: relative; max-width: 600px; margin: 0 auto; }
@@ -785,7 +793,8 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://www.fiverr.com/acca_adan" target="_blank" class="nav-cta">Hire Me</a></li>
+    <li><a href="https://www.fiverr.com/acca_adan" target="_blank" class="nav-cta">Hire on Fiverr</a></li>
+    <li><a href="https://www.upwork.com/freelancers/hamzaadan" target="_blank" class="nav-cta" style="background:#14a800;margin-left:0.5rem;">Hire on Upwork</a></li>
   </ul>
 </nav>
 
@@ -804,7 +813,7 @@
     </p>
     <div class="hero-actions">
       <a href="https://www.fiverr.com/acca_adan" target="_blank" class="btn-primary">Hire Me on Fiverr</a>
-      <a href="#blog" class="btn-secondary">Read the Blog</a>
+      <a href="https://www.upwork.com/freelancers/hamzaadan" target="_blank" class="btn-secondary">Hire on Upwork</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -857,6 +866,90 @@
               <div class="credential-text">7+ Years Financial Experience</div>
               <div class="credential-sub">Treasury, AP/AR, Financial Reporting, Management Accounts</div>
             </div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-icon">💸</div>
+            <div>
+              <div class="credential-text">Branch Assistant Manager — Continental Forex Bureau</div>
+              <div class="credential-sub">Multi-currency treasury · $150,000 daily · Nairobi, Kenya · 2022–2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE TIMELINE -->
+        <div style="margin-top:2.5rem;">
+          <div class="section-label">Professional Experience</div>
+          <div style="display:flex;flex-direction:column;gap:0;">
+
+            <div style="display:flex;gap:1rem;padding-bottom:1.8rem;border-left:2px solid rgba(159,225,203,0.25);margin-left:8px;padding-left:1.5rem;position:relative;">
+              <div style="position:absolute;left:-5px;top:5px;width:10px;height:10px;background:var(--mint);border-radius:50%;box-shadow:0 0 8px rgba(159,225,203,0.5);"></div>
+              <div>
+                <div style="display:inline-block;background:rgba(159,225,203,0.1);border:1px solid rgba(159,225,203,0.25);padding:1px 8px;border-radius:20px;font-size:0.65rem;font-weight:700;color:var(--mint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;">Current Role</div>
+                <div style="font-size:0.9rem;font-weight:700;color:var(--white);">Financial Accountant</div>
+                <div style="font-size:0.72rem;color:var(--mint);margin:3px 0 6px;">Hyperloop Haulier &middot; Zambia &middot; June 2025 &ndash; Present</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:6px;font-style:italic;">Fuel logistics company operating 50+ trucks across 6 countries in East and Southern Africa</div>
+                <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+                  &rsaquo; Prepared monthly financial analysis reports on revenues up to $100,000 &mdash; gross profit, cost trends, fund allocations for senior management<br>
+                  &rsaquo; Managed full AP/AR cycles across 6 suppliers and 15 subcontractors in high-volume logistics environment<br>
+                  &rsaquo; Processed payroll and statutory compliance for 50+ employees across Zambia every month
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;padding-bottom:1.8rem;border-left:2px solid rgba(159,225,203,0.25);margin-left:8px;padding-left:1.5rem;position:relative;">
+              <div style="position:absolute;left:-5px;top:5px;width:10px;height:10px;background:var(--mint);border-radius:50%;"></div>
+              <div>
+                <div style="font-size:0.9rem;font-weight:700;color:var(--white);">Vice Treasurer</div>
+                <div style="font-size:0.72rem;color:var(--mint);margin:3px 0 6px;">Kenya Forex Remittance Association &middot; Nairobi &middot; Jan 2025 &ndash; Apr 2025</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:6px;font-style:italic;">Treasury management for an industry association board</div>
+                <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+                  &rsaquo; Produced treasury and financial risk reports for board-level decision-making<br>
+                  &rsaquo; Monitored budget performance and ensured all financial documentation was accurate and policy-compliant
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;padding-bottom:1.8rem;border-left:2px solid rgba(159,225,203,0.25);margin-left:8px;padding-left:1.5rem;position:relative;">
+              <div style="position:absolute;left:-5px;top:5px;width:10px;height:10px;background:var(--mint);border-radius:50%;"></div>
+              <div>
+                <div style="font-size:0.9rem;font-weight:700;color:var(--white);">Branch Assistant Manager</div>
+                <div style="font-size:0.72rem;color:var(--mint);margin:3px 0 6px;">Continental Forex Bureau Ltd &middot; Nairobi &middot; Apr 2022 &ndash; Apr 2025</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:6px;font-style:italic;">Multi-currency treasury operations &amp; FX trading in a high-volume foreign exchange branch</div>
+                <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+                  &rsaquo; Managed daily financial transactions up to $150,000 &mdash; zero discrepancies maintained over 3 years<br>
+                  &rsaquo; Supervised team of 5 tellers providing operational training and performance feedback<br>
+                  &rsaquo; Optimised liquidity and cash flow by managing bank balances and liaising with FX brokers
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;padding-bottom:1.8rem;border-left:2px solid rgba(159,225,203,0.15);margin-left:8px;padding-left:1.5rem;position:relative;">
+              <div style="position:absolute;left:-5px;top:5px;width:10px;height:10px;background:rgba(159,225,203,0.5);border-radius:50%;"></div>
+              <div>
+                <div style="font-size:0.9rem;font-weight:700;color:var(--white);">Account Manager &amp; Western Union Officer</div>
+                <div style="font-size:0.72rem;color:var(--mint);margin:3px 0 6px;">Hodan Global Money Remittance &middot; Nairobi &middot; Feb 2018 &ndash; Mar 2022</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:6px;font-style:italic;">MoneyGram &amp; Western Union franchise operator partnered with POSTBANK Kenya</div>
+                <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+                  &rsaquo; Managed 1,500+ clients monthly processing over $1M in payments<br>
+                  &rsaquo; Traded $100,000 in foreign currencies daily &mdash; P2P and D2B international wire transfers<br>
+                  &rsaquo; Collaborated with POSTBANK to streamline services resulting in 20% income increase
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;padding-bottom:0;border-left:2px solid rgba(159,225,203,0.08);margin-left:8px;padding-left:1.5rem;position:relative;">
+              <div style="position:absolute;left:-5px;top:5px;width:10px;height:10px;background:rgba(159,225,203,0.3);border-radius:50%;"></div>
+              <div>
+                <div style="font-size:0.9rem;font-weight:700;color:var(--white);">Financial Customer Service Representative</div>
+                <div style="font-size:0.72rem;color:var(--mint);margin:3px 0 6px;">Hodan Global Money Remittance &middot; Nairobi &middot; Oct 2015 &ndash; Mar 2022</div>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);margin-bottom:6px;font-style:italic;">Money transfer company and forex brokerage company</div>
+                <div style="font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+                  &rsaquo; Teller transactions, cash management and foreign exchange operations<br>
+                  &rsaquo; Handled 100+ customer calls daily across international money transfer operations in 100 countries
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -975,6 +1068,118 @@
   </div>
 </section>
 
+<!-- PRODUCTS -->
+<section style="padding:6rem 2rem;background:linear-gradient(180deg,#060809 0%,#081210 50%,#060809 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(15,110,86,0.12) 0%,transparent 70%);"></div>
+  <div class="container" style="position:relative;">
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#9FE1CB;margin-bottom:1rem;text-shadow:0 0 20px rgba(159,225,203,0.4);">Digital Products</div>
+      <h2 style="font-family:Playfair Display,serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:#ffffff;margin-bottom:0.8rem;">Professional Tools <span style="color:#9FE1CB;">Built by an ACCA Accountant</span></h2>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;max-width:520px;margin:0 auto;line-height:1.7;">Download instantly. Use forever. Built with audit-ready formulas and real financial expertise.</p>
+    </div>
+
+    <!-- Product Card -->
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="background:rgba(15,110,86,0.06);border:1px solid rgba(15,110,86,0.25);border-radius:16px;padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(159,225,203,0.4)';this.style.background='rgba(15,110,86,0.1)'" onmouseout="this.style.borderColor='rgba(15,110,86,0.25)';this.style.background='rgba(15,110,86,0.06)'">
+
+        <!-- Left side -->
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(15,110,86,0.2);border:1px solid rgba(159,225,203,0.3);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9FE1CB;margin-bottom:1.2rem;">⭐ Featured Product</div>
+          <h3 style="font-family:Playfair Display,serif;font-size:1.6rem;font-weight:900;color:#ffffff;line-height:1.2;margin-bottom:1rem;">Professional Multi-Currency Business Finance Toolkit</h3>
+          <p style="color:rgba(255,255,255,0.55);font-size:0.88rem;line-height:1.7;margin-bottom:1.5rem;">9 professional Excel sheets with 32 currencies pre-loaded. Automated P&L, cash flow forecast, invoice tracker and financial dashboard. Built by an ACCA part-qualified accountant for global business owners.</p>
+
+          <!-- Features list -->
+          <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem;">
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> 9 Professional sheets — Dashboard, P&L, Cash Flow and more
+            </div>
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> 32 currencies — USD, GBP, EUR, KES, TZS, ZMW, NGN, AED and more
+            </div>
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> Automated P&L pulling from your income and expense entries
+            </div>
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> Invoice tracker with payment status and overdue alerts
+            </div>
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> Built by ACCA Part-Qualified Accountant — audit-ready formulas
+            </div>
+            <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(255,255,255,0.7);">
+              <span style="color:#9FE1CB;">✅</span> Download instantly — use forever — 30 day money back guarantee
+            </div>
+          </div>
+
+          <!-- Price and CTA -->
+          <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+            <div>
+              <div style="font-size:2.5rem;font-weight:900;color:#9FE1CB;font-family:Playfair Display,serif;line-height:1;">$29</div>
+              <div style="font-size:0.7rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;">One time payment</div>
+            </div>
+            <a href="https://buildingafrica.gumroad.com/l/multi-currency-finance-toolkit" target="_blank" style="background:linear-gradient(135deg,#0F6E56 0%,#12876A 100%);color:#ffffff;padding:0.9rem 2rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;border:2px solid #0F6E56;transition:all 0.2s;" onmouseover="this.style.background='transparent';this.style.color='#9FE1CB';this.style.borderColor='#9FE1CB'" onmouseout="this.style.background='linear-gradient(135deg,#0F6E56 0%,#12876A 100%)';this.style.color='#ffffff';this.style.borderColor='#0F6E56'">Get Instant Access →</a>
+          </div>
+        </div>
+
+        <!-- Right side — stats -->
+        <div style="background:rgba(8,80,65,0.3);border:1px solid rgba(15,110,86,0.3);border-radius:12px;padding:2rem;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#9FE1CB;margin-bottom:1.5rem;">What is inside</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+            <div style="text-align:center;padding:1rem;background:rgba(15,110,86,0.15);border-radius:8px;">
+              <div style="font-family:Playfair Display,serif;font-size:2rem;font-weight:900;color:#9FE1CB;">9</div>
+              <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.08em;">Sheets</div>
+            </div>
+            <div style="text-align:center;padding:1rem;background:rgba(15,110,86,0.15);border-radius:8px;">
+              <div style="font-family:Playfair Display,serif;font-size:2rem;font-weight:900;color:#9FE1CB;">32</div>
+              <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.08em;">Currencies</div>
+            </div>
+            <div style="text-align:center;padding:1rem;background:rgba(15,110,86,0.15);border-radius:8px;">
+              <div style="font-family:Playfair Display,serif;font-size:2rem;font-weight:900;color:#9FE1CB;">$0</div>
+              <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.08em;">Hidden fees</div>
+            </div>
+            <div style="text-align:center;padding:1rem;background:rgba(15,110,86,0.15);border-radius:8px;">
+              <div style="font-family:Playfair Display,serif;font-size:2rem;font-weight:900;color:#9FE1CB;">30</div>
+              <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.08em;">Day guarantee</div>
+            </div>
+          </div>
+
+          <div style="padding:1rem;background:rgba(159,225,203,0.06);border:1px solid rgba(159,225,203,0.15);border-radius:8px;">
+            <div style="font-size:0.8rem;color:#E1F5EE;line-height:1.6;font-style:italic;">&ldquo;Most Excel templates are built by designers. This one was built by an accountant who has managed millions of dollars in real transactions.&rdquo;</div>
+            <div style="font-size:0.7rem;color:#9FE1CB;margin-top:0.5rem;font-weight:600;">— Hamza Adan, ACCA Part-Qualified</div>
+          </div>
+
+          <div style="margin-top:1rem;text-align:center;">
+            <a href="https://buildingafrica.gumroad.com/l/multi-currency-finance-toolkit" target="_blank" style="color:#9FE1CB;font-size:0.75rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;border-bottom:1px solid #9FE1CB;padding-bottom:2px;">View on Gumroad →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coming soon -->
+      <div style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <div style="background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:10px;padding:1.5rem;text-align:center;opacity:0.6;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">📈</div>
+          <div style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.5);">Cash Flow Forecast Model</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:0.3rem;">Coming soon — $29</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:10px;padding:1.5rem;text-align:center;opacity:0.6;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">📋</div>
+          <div style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.5);">Business Plan Template</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:0.3rem;">Coming soon — $49</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:10px;padding:1.5rem;text-align:center;opacity:0.6;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">🎓</div>
+          <div style="font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.5);">ACCA Study Planner</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:0.3rem;">Coming soon — $15</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- BLOG -->
 <section class="blog" id="blog">
   <div class="container">
@@ -991,14 +1196,16 @@
   </div>
 </section>
 
+
 <!-- PLATFORMS -->
 <section class="platforms">
   <div class="container">
     <div class="platforms-label">Find me across the internet</div>
     <div class="platforms-row">
-      <a href="https://twitter.com/EarnNomadHQ" target="_blank" class="platform-chip">🐦 Twitter @EarnNomadHQ</a>
+      <a href="https://twitter.com/EarnNomadHQ" target="_blank" class="platform-chip">🐦 Twitter</a>
       <a href="https://linkedin.com/in/hamza-05" target="_blank" class="platform-chip">💼 LinkedIn</a>
       <a href="https://www.fiverr.com/acca_adan" target="_blank" class="platform-chip">🎯 Fiverr</a>
+      <a href="https://www.upwork.com/freelancers/hamzaadan" target="_blank" class="platform-chip">🔧 Upwork</a>
       <a href="https://buildafricanow.blogspot.com" target="_blank" class="platform-chip">✍️ Blog</a>
       <a href="https://pinterest.com/EarnNomadHQ" target="_blank" class="platform-chip">📌 Pinterest</a>
       <a href="https://medium.com/@EarnNomadHQ" target="_blank" class="platform-chip">📖 Medium</a>
@@ -1016,7 +1223,7 @@
     <p>Whether you need accounting services, want to collaborate, or just want to follow the EarnNomad HQ journey — I read and respond to every message personally.</p>
     <div class="contact-actions">
       <a href="https://www.fiverr.com/acca_adan" target="_blank" class="btn-primary">Hire Me on Fiverr</a>
-      <a href="mailto:hello.buildinginafrica@gmail.com" class="btn-secondary">Send an Email</a>
+      <a href="https://www.upwork.com/freelancers/hamzaadan" target="_blank" class="btn-secondary">Hire on Upwork</a>
     </div>
   </div>
 </section>
